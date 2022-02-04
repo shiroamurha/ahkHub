@@ -14,12 +14,16 @@ def index():
 
 @app.route('/button1on')
 def button1_event_on():
-    var = button1()
+    var = button('textbox.exe')
     var.run()
     return ''
 
 @app.route('/button1off')
 def button1_event_off():
-    var = button1()
+    var = button('textbox.exe')
     var.exit()
     return ''
+
+if __name__ == '__main__':
+
+    app.run(host='127.0.0.1', port=5000)
