@@ -3,20 +3,19 @@ from time import sleep
 
 
 
-class button1():
+class button():
 
-	def __init__(self, arg=None):
+	def __init__(self, name=None):
 
-		self.arg = arg
+		self.name = name
 
-		if self.arg == None:
+		if self.name != None:
 
-			self.name = 'textbox.exe'
 			self.path = rf'{os.path.dirname(os.path.realpath(__file__))}\\src\\{self.name}'
 
 			return
 		else:
-			raise 'tome'
+			raise 'button recieves exec file args'
 
 
 	def run(self):
@@ -24,6 +23,8 @@ class button1():
 
 	def exit(self):
 		os.system(f'taskkill /im {self.name}')
+
+
 
 
 
